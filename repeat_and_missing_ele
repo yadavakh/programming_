@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a[5]={2,4,1,2,5};
+    int repeat,missing;
+    for(int i=0;i<5;i++)
+    {
+        if(a[abs(a[i])-1]<0)
+        repeat=abs(a[i]);
+        else
+        a[abs(a[i])-1]= -a[abs(a[i])-1];
+    }
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]>0)
+        {
+            missing=i+1;
+            break;
+        }
+    }
+    cout<<repeat<<endl;
+    cout<<missing;
+    return 0;
+    
+}
