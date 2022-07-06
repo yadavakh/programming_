@@ -1,0 +1,23 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int a[]={12, 4,  7,  9,  2,  23, 25, 41, 30,
+                  40, 28, 42, 30, 44, 48, 43, 50 };
+                  int curdiff=0;
+                  int mindiff=99999;
+                  int m=7;
+                  sort(a,a+17);
+                  
+                  for(int i=0;i<17-m+1;i++)
+                  {
+                      curdiff=a[i+m-1]-a[i];
+                      if(curdiff<mindiff)
+                      mindiff=curdiff;
+                    // cout<<a[i]<<endl;
+                  }
+                  cout<<mindiff<<endl;
+	return 0;
+}
