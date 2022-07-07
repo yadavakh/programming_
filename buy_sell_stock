@@ -17,7 +17,7 @@ int main()
         if (a[i] == min) j= i;
     }
      int maxdiff=-8989;
-     int currentdiff=0;
+     
     for(int i=j;i<6;i++)
     {
         if(a[i]-min>maxdiff)
