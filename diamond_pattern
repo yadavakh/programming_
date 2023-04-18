@@ -1,0 +1,42 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++)
+    {
+        int no_of_spaces=n-i;
+        for(int j=0;j<no_of_spaces;j++)
+        {
+            cout<<" ";
+        }
+    
+        int no_of_alp=2*i-1;
+        for (int k=0;k<no_of_alp;k++)
+        {
+            char ch = (char)('A'+k);
+            cout<<ch;
+        }
+    
+        cout<<endl;
+       
+    }
+    for (int i=n+1;i<2*n;i++)
+    {
+        int no=i-n;
+        for(int l=0;l<no;l++)
+        {
+            cout<<" ";
+        }
+        int c=2*(2*n-i)-1;
+        for(int e=0;e<c;e++)
+        {
+            char ch=(char)('A'+e);
+            cout<<ch;
+        }
+        cout<<endl;
+    }
+}
