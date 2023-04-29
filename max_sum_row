@@ -1,0 +1,36 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+int main()
+{
+    int r,c;
+    cin>>r>>c;
+    vector<vector<int>>v(r,vector<int>(c));
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+          cin>>v[i][j];
+        }
+
+    }
+    int m=0;
+    int indx=-1;
+    for(int i=0;i<v.size();i++)
+    {
+        int ans=0;
+        int j=0;
+        while(j<c)
+        {
+            ans+=v[i][j];
+            j++;
+        }
+        if(ans>m)
+        {
+            m=ans;
+            indx=i;
+        }
+    }
+    cout<<indx;
+    return 0;
+}
