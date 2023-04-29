@@ -1,0 +1,34 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+int main()
+    {
+        int n; 
+        cin>>n;
+        vector<int> v(n);   
+        for(int i=0;i<n;i++)
+        {
+            cin>>v[i];
+        }
+        int first=-1;
+        int second=0;
+        while(second!=n)
+        {
+            if(v[second]==0)
+            {
+                second++;
+            }
+            if(v[second]!=0)
+            {
+                first++;
+                swap(v[first],v[second]);
+                second++;
+            }
+        }
+            for(int value:v)
+            {
+                cout<<value;
+            }
+        
+        return 0;
+    }
